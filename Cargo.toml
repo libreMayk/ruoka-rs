@@ -1,7 +1,12 @@
 [package]
 name = "ruoka-rs"
-version = "0.1.0"
+description = "Fetch the mayk.fi menu efficiently"
+version = "1.0.0"
 edition = "2021"
+license-file = "LICENSE"
+readme = "README.md"
+repository = "https://github.com/libreMayk/ruoka-rs"
+keywords = ["menu", "mayk", "food"]
 
 [dependencies]
 curl = "0.4.43"
