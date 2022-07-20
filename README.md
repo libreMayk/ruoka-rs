@@ -24,6 +24,29 @@ curl https://sh.rustup.rs -sSf | sh
 
 For other installation options and information, visit the [install](https://www.rust-lang.org/tools/install) page of the Rust website.
 
+### 🦀 On **Termux** (why?):
+
+Run the following:
+
+```bash
+pkg i rust # install rust
+git clone https://github.com/libreMayk/ruoka-rs # clone the repo
+cd ruoka-rs
+cargo build # compile
+```
+
+After that, add `ruoka-rs` to your **PATH** using your favourite text editor:
+
+```bash
+vim ~/.bashrc
+```
+
+and add the following to the `~/.bashrc` file:
+
+```bash
+export PATH=$PATH:~/ruoka-rs/target/debug/ruoka-rs
+```
+
 ### 🦀 **Build and Install Cargo from Source**
 
 Alternatively, you can [build `Cargo` from source](https://github.com/rust-lang/cargo#compiling-from-source).
@@ -31,3 +54,11 @@ Alternatively, you can [build `Cargo` from source](https://github.com/rust-lang/
 ## **Enjoy!**
 
 (Also, feel free to contact [zeriaxdev](https://github.com/zeriaxdev) if you have any issues or questions.)
+
+```
+
+```
+
+```
+
+```
