@@ -3,7 +3,7 @@ use curl::easy::Easy;
 use regex::Regex;
 
 fn main() {
-    println!("{}", "⏳ loading menu...".red());
+    println!("{}", "🦀 loading menu...".red().bold());
     let html = get_data();
     let days = ["ma", "ti", "ke", "to", "pe"];
 
