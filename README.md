@@ -54,11 +54,3 @@ Alternatively, you can [build `Cargo` from source](https://github.com/rust-lang/
 ## **Enjoy!**
 
 (Also, feel free to contact [zeriaxdev](https://github.com/zeriaxdev) if you have any issues or questions.)
-
-```
-
-```
-
-```
-
-```
