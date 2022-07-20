@@ -12,6 +12,14 @@ cargo build # compile
 mv ./target/debug/ruoka-rs /usr/bin # move the program to bin (superuser)
 ```
 
+### **OR**
+
+Install the [package](https://crates.io/crates/ruoka-rs) via `cargo`:
+
+```bash
+cargo install ruoka-rs
+```
+
 ## Missing `cargo`?
 
 ### 🦀 On **Linux** and **MacOS** systems, run:
