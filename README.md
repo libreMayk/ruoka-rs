@@ -9,7 +9,7 @@ Run the following in your terminal:
 
 ```bash
 cargo build # compile
-mv ./target/debug/ruoka-rs /usr/bin # move the program to bin (superuser)
+mv ./target/debug/ruoka-rs /usr/bin # move the program to bin
 ```
 
 ### **OR**
