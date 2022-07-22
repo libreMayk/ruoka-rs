@@ -5,6 +5,8 @@ The program `curl`s the html, parses it with Regex and makes it more _colorful_.
 
 ## Installation
 
+### **Linux** & **MacOS**
+
 Run the following in your terminal:
 
 ```bash
@@ -12,7 +14,7 @@ cargo build # compile
 mv ./target/debug/ruoka-rs /usr/bin # move the program to bin
 ```
 
-### **OR**
+### **Other systems**
 
 Install the [package](https://crates.io/crates/ruoka-rs) via `cargo`:
 
