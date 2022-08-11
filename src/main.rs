@@ -30,12 +30,13 @@ fn main() {
     // print the menu to the output
     for (i, meal) in menu.iter().enumerate() {
         let f = meal.replace("\\xc3\\xb6", "ö").replace("\\xc3\\xa4", "ä");
-        let day = days[i / 2];
+        let len = days.len() - (menu.len() / 2) + i / 2;
+        let day = days[len];
 
         if i % 2 == 0 {
             // show current day
             if day == today {
-                print!("{} ", day.to_uppercase().bold().red());
+                print!("{} ", day.bold().red());
             } else {
                 print!("{} ", day.bold().blue());
             }
