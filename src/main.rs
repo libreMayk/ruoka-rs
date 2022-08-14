@@ -7,9 +7,9 @@ fn main() {
     println!("{}", "🦀 loading menu...".red().bold());
     let html = get_data("https://www.mayk.fi/tietoa-meista/ruokailu/");
 
-    let dt = Local::now().weekday().num_days_from_monday();
     let days = ["ma", "ti", "ke", "to", "pe"].to_vec();
-    let today = days[dt as usize];
+
+    let today = days[day_today()];
 
     let regex = Regex::new(r#"(?m)<p class="ruoka-header-(ruoka|kasvisruoka)">([^<]*)<"#).unwrap();
 
@@ -68,4 +68,15 @@ fn get_data(url: &str) -> String {
 
     // convert to String from &[u8]
     return String::from_utf8(data).expect("The body is not valid UTF8!");
+}
+
+// check if the day is not out of limit
+fn day_today() -> usize {
+    let dt = Local::now().weekday().num_days_from_monday();
+
+    if dt >= 5 {
+        return 0;
+    } else {
+        return dt as usize;
+    }
 }
