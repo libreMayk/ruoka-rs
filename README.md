@@ -1,7 +1,9 @@
 # 🦀 ruoka-rs
 
-Since `ruoka-rs` is written in Rust, it is a tool to **quickly** get the menu from [mayk.fi/tietoa-meista/ruokailu](https://mayk.fi/tietoa-meista/ruokailu).
+A tool to **quickly** get the menu from [mayk.fi/tietoa-meista/ruokailu](https://mayk.fi/tietoa-meista/ruokailu).
 The program `curl`s the html, parses it with Regex and makes it more _colorful_.
+
+<p><img src=".github/assets/demo.gif" alt="demo.gif" width="500"></p>
 
 ## Installation
 
@@ -9,9 +11,9 @@ The program `curl`s the html, parses it with Regex and makes it more _colorful_.
 
 Run the following in your terminal:
 
-```bash
-cargo build # compile
-mv ./target/debug/ruoka-rs /usr/bin # move the program to bin
+```sh
+cargo build                           # compile
+mv ./target/debug/ruoka-rs /usr/bin   # move the program to bin
 ```
 
 ### **Other systems**

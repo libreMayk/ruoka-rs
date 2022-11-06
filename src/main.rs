@@ -4,7 +4,7 @@ use curl::easy::Easy;
 use regex::Regex;
 
 fn main() {
-    println!("{}", "🦀 loading menu...".red().bold());
+    println!("{} {}", "~>".red().bold(), "loading menu...".red().bold());
     let html = get_data("https://www.mayk.fi/tietoa-meista/ruokailu/");
 
     let days = ["ma", "ti", "ke", "to", "pe"].to_vec();
@@ -23,13 +23,13 @@ fn main() {
 
     // if no items in menu, return
     if menu.len() == 0 {
-        println!("{}", "😢 no food this week".blue().bold());
+        println!("{}", "no food this week :(".blue().bold());
         return;
     }
 
     // print the menu to the output
     for (i, meal) in menu.iter().enumerate() {
-        let f = meal.replace("\\xc3\\xb6", "ö").replace("\\xc3\\xa4", "ä");
+        let food = meal.replace("\\xc3\\xb6", "ö").replace("\\xc3\\xa4", "ä");
         let len = days.len() - (menu.len() / 2) + i / 2;
         let day = days[len];
 
@@ -42,10 +42,22 @@ fn main() {
             }
 
             let norm = "meal:".yellow();
-            println!("{norm} {f}");
+            let mut full = format!("{norm} {food}");
+
+            if day == today {
+                full = full.bold().to_string();
+            }
+
+            println!("{full}");
         } else {
             let vege = "vege:".green();
-            println!("   {vege} {}", f.green());
+            let mut full = format!("   {vege} {}", food.green());
+
+            if day == today {
+                full = full.bold().to_string();
+            }
+
+            println!("{full}");
         }
     }
 }
